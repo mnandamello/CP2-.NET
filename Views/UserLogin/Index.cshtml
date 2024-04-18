@@ -1,0 +1,18 @@
+﻿@page
+@model CP2_.NET.Views.Login.IndexModel
+@{
+}
+<div class="text-center">
+    <form asp-controller="UserLogin" asp-action="FLogin" method="post">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input name="UserEmail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+
+
+        <label for="inputPassword5" class="form-label">Password</label>
+        <input name="UserPassword" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <button type="submit">Logar</button>
+    </form>
+</div>
