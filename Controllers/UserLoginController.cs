@@ -34,8 +34,6 @@ namespace CP2_.NET.Controllers
                 return BadRequest("Senha incorreta");
             }
 
-            // Aqui você pode adicionar a lógica para iniciar a sessão do usuário, se desejar
-
             return View(); // Redireciona para a página inicial após o login
         }
     }
