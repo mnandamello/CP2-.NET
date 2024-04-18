@@ -3,23 +3,81 @@
 @{
 }
 
-<div class="text-center">
-    <form asp-controller="User" asp-action="Register" method="post">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #B0C4DE;
+        margin: 0;
+        padding: 0;
+    }
 
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #FFFAF0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        <input name="UserName" class="form-control form-control-lg" type="text" placeholder="UserName">
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"],
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
 
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input name="UserEmail" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #007bff;
+        }
 
+        .form-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-        <label for="inputPassword5" class="form-label">Password</label>
-        <input name="UserPassword" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-        <div id="passwordHelpBlock" class="form-text">
-            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-        </div>
-        <button type="submit">Cadastrar</button>
-    </form>
-</div>
+            .form-container button:hover {
+                background-color: #0056b3;
+            }
+
+        .form-container .form-text {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+</style>
+<body>
+
+    <div class="form-container">
+        <form asp-controller="User" asp-action="Register" method="post">
+            <label for="username">Username</label>
+            <input name="UserName" class="form-control form-control-lg" type="text" placeholder="Enter your username" required>
+
+            <label for="email">Email address</label>
+            <input name="UserEmail" type="email" class="form-control" id="email" placeholder="name@example.com" required>
+
+            <label for="password">Password</label>
+            <input name="UserPassword" type="password" id="password" class="form-control" placeholder="Enter your password" required>
+
+            <div class="form-text">
+                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
