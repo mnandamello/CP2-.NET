@@ -16,4 +16,8 @@
     <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.21.140" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+
 </Project>
